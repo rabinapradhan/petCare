@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/placeCard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:layout_marginTop="20dp"
+    android:paddingStart="16dp"
+    android:paddingTop="14dp"
+    android:paddingEnd="16dp"
+    android:paddingBottom="14dp"
+    android:background="@drawable/bg_place_card"
+    android:clickable="true"
+    android:focusable="true">
+
+    <!-- LOCATION ICON -->
+    <FrameLayout
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:background="@drawable/bg_place_icon"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/placeLocationIcon"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_location"
+            android:contentDescription="Place location" />
+
+    </FrameLayout>
+
+
+    <!-- ================================================== -->
+    <!-- PLACE INFORMATION -->
+    <!-- ================================================== -->
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingStart="14dp"
+        android:paddingEnd="10dp">
+
+        <!-- Place name -->
+
+        <TextView
+            android:id="@+id/placeNameText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hecate Prd"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:maxLines="1"
+            android:ellipsize="end" />
+
+
+        <!-- Place type -->
+
+        <TextView
+            android:id="@+id/placeTypeText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="Veterinary clinic"
+            android:textColor="@color/text_secondary"
+            android:textSize="14sp"
+            android:maxLines="1"
+            android:ellipsize="end" />
+
+
+        <!-- Coordinates -->
+
+        <TextView
+            android:id="@+id/placeCoordinatesText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:text="27.7111, 85.2817"
+            android:textColor="@color/text_secondary"
+            android:textSize="13sp"
+            android:maxLines="1"
+            android:ellipsize="end" />
+
+    </LinearLayout>
+
+
+    <!-- ================================================== -->
+    <!-- DELETE BUTTON -->
+    <!-- ================================================== -->
+
+    <FrameLayout
+        android:id="@+id/deletePlaceButton"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:background="@drawable/bg_place_icon"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackgroundBorderless">
+
+        <ImageView
+            android:id="@+id/deletePlaceIcon"
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_delete"
+            android:contentDescription="Delete place" />
+
+    </FrameLayout>
+
+</LinearLayout>

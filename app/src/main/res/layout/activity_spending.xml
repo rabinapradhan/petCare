@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/pet_background">
+
+    <!-- HEADER -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="22dp"
+        android:paddingStart="18dp"
+        android:paddingEnd="18dp"
+        android:background="@color/pet_background">
+
+        <!-- Spending icon -->
+
+        <ImageView
+            android:id="@+id/petProfileIcon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="9dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_pet_profile2"
+            android:contentDescription="Pet Profile"
+            android:background="@drawable/bg_spending_plus"
+            app:tint="@android:color/white" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginStart="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Spending"
+                android:textColor="@color/pet_text"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Food, grooming, vet care and more"
+                android:textColor="@color/pet_secondary_text"
+                android:textSize="12sp"
+                android:layout_marginTop="2dp"/>
+
+        </LinearLayout>
+
+        <!-- Plus button -->
+
+        <TextView
+            android:id="@+id/addExpenseButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="+"
+            android:textColor="@android:color/white"
+            android:textSize="28sp"
+            android:background="@drawable/bg_spending_plus"
+            android:clickable="true"
+            android:focusable="true"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/pet_border"/>
+
+
+    <!-- CONTENT -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="18dp">
+
+            <!-- Totals -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="88dp"
+                android:orientation="horizontal">
+
+                <!-- This month -->
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:padding="18dp"
+                    android:background="@drawable/bg_spending_amount_card">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="THIS MONTH"
+                        android:textColor="@color/pet_secondary_text"
+                        android:textSize="12sp"/>
+
+                    <TextView
+                        android:id="@+id/monthTotalText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="£0.00"
+                        android:textColor="@color/pet_text"
+                        android:textSize="21sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="5dp"/>
+
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="12dp"
+                    android:layout_height="1dp"/>
+
+                <!-- All time -->
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:padding="18dp"
+                    android:background="@drawable/bg_spending_amount_card">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ALL TIME"
+                        android:textColor="@color/pet_secondary_text"
+                        android:textSize="12sp"/>
+
+                    <TextView
+                        android:id="@+id/allTimeTotalText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="£0.00"
+                        android:textColor="@color/pet_text"
+                        android:textSize="21sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="5dp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <!-- EMPTY STATE -->
+
+
+            <LinearLayout
+                android:id="@+id/emptyState"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="18dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_spending_empty">
+
+                <TextView
+                    android:id="@+id/emptyMessage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Nothing logged yet. Tap the plus button after your next pet purchase."
+                    android:textColor="#61756B"
+                    android:textSize="14sp"
+                    android:lineSpacingExtra="3dp"/>
+
+            </LinearLayout>
+
+
+
+            <!-- EXPENSE LIST -->
+
+            <LinearLayout
+                android:id="@+id/expenseListContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="16dp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+    <!-- BOTTOM NAVIGATION -->
+
+
+
+    <include
+        layout="@layout/bottom_navigation"/>
+
+</LinearLayout>

@@ -1,0 +1,84 @@
+<resources>
+
+    <string name="app_name">PetCare</string>
+
+    <string name="sign_in">Sign in</string>
+
+    <string name="hero_title">Care that never slips</string>
+
+    <string name="hero_description">
+        PetCare keeps every feeding, walk, grooming session and vet visit in one place.
+    </string>
+
+    <string name="get_started">Get started</string>
+
+    <string name="pet_profiles">Pet profiles</string>
+
+    <string name="pet_profiles_description">
+        Breed, weight, diet, allergies, vaccinations, toys and photos.
+    </string>
+
+    <string name="care_checklists">Care checklists</string>
+
+    <string name="care_checklists_description">
+        Daily and weekly routines grouped by feeding, exercise, grooming, medication and healthcare.
+    </string>
+
+    <string name="delegate_sms">Delegate by SMS</string>
+
+    <string name="delegate_sms_description">
+        Send a full care plan to a family member or pet sitter in one tap.
+    </string>
+
+    <string name="expense_tracking">Expense tracking</string>
+
+    <string name="expense_tracking_description">
+        Food, grooming, vet visits and medication costs summarised per pet.
+    </string>
+
+    <string name="geotagged_places">Geotagged places</string>
+
+    <string name="geotagged_places_description">
+        Pin vet clinics, groomers, dog parks and stores on a map.
+    </string>
+
+    <string name="reminders">Reminders at a glance</string>
+
+    <string name="reminders_description">
+        See what is still due today and mark tasks done as you go.
+    </string>
+
+    <string name="cta_title">Set up your first pet in a minute</string>
+
+    <string name="cta_description">
+        Register an account, add your pets and PetCare builds their personalised care checklist.
+    </string>
+
+    <string name="create_account">Create an account</string>
+
+
+    <string name="login_welcome">Welcome back</string>
+
+    <string name="login_subtitle">
+    Sign in to see today\'s care checklist.
+</string>
+
+    <string name="email">Email</string>
+
+    <string name="password">Password</string>
+
+    <string name="or">or</string>
+
+    <string name="continue_google">Continue with Google</string>
+
+    <string name="new_to_petcare">New to PetCare?</string>
+
+    <string name="register">Register</string>
+
+    <string name="back_home">Back to home</string>
+    <string name="enter_your_email">Enter your email</string>
+    <string name="create_your_account">Create your account</string>
+    <string name="register_to_build">Register to build personalised care routines for every pet.</string>
+    <string name="your_name">Your name</string>
+
+</resources>

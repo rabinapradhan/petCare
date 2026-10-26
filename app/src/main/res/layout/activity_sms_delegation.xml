@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F6F9F0"
+    tools:context=".SmsDelegationActivity">
+
+
+    <!-- ========================================================= -->
+    <!-- HEADER -->
+    <!-- ========================================================= -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:layout_marginTop="24dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="18dp"
+        android:paddingEnd="18dp"
+        android:background="#F6F9F0">
+
+
+        <!-- BACK BUTTON -->
+
+        <TextView
+            android:id="@+id/backButton"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:gravity="center"
+            android:text="‹"
+            android:textSize="30sp"
+            android:textColor="#203026"
+            android:background="@drawable/bg_icon_circle"
+            android:clickable="true"
+            android:focusable="true"
+            android:contentDescription="Go back" />
+
+
+        <!-- TITLE -->
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginStart="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Delegate Care"
+                android:textSize="19sp"
+                android:textStyle="bold"
+                android:textColor="#18231B" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Send today's care instructions by SMS"
+                android:textSize="12sp"
+                android:textColor="#68766D" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <!-- ========================================================= -->
+    <!-- HEADER DIVIDER -->
+    <!-- ========================================================= -->
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#DDE5D9" />
+
+
+    <!-- ========================================================= -->
+    <!-- CONTENT -->
+    <!-- ========================================================= -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:clipToPadding="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="18dp"
+            android:paddingEnd="18dp"
+            android:paddingTop="18dp"
+            android:paddingBottom="28dp">
+
+
+            <!-- ================================================= -->
+            <!-- PET SELECTION -->
+            <!-- ================================================= -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PET"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="#68766D" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="16dp"
+                android:background="@drawable/bg_card"
+                android:clickable="true"
+                android:focusable="true">
+
+
+                <!-- PET ICON -->
+
+                <!-- PET ICON -->
+                <ImageView
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:src="@drawable/ic_pet_profile2"
+                    android:background="@drawable/bg_button_green"
+                    android:padding="10dp"
+                    android:contentDescription="Pet"
+                    />
+                <!-- PET INFORMATION -->
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginStart="12dp">
+
+                    <TextView
+                        android:id="@+id/petNameText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Select a pet"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        android:textColor="#18231B" />
+
+                    <TextView
+                        android:id="@+id/petSubtitleText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:text="Choose the pet whose care you want to delegate"
+                        android:textSize="12sp"
+                        android:textColor="#68766D" />
+
+                </LinearLayout>
+
+
+                <!-- SELECT INDICATOR -->
+
+                <TextView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:gravity="center"
+                    android:text="›"
+                    android:textSize="25sp"
+                    android:textColor="#68766D" />
+
+            </LinearLayout>
+
+
+            <!-- ================================================= -->
+            <!-- PHONE NUMBER -->
+            <!-- ================================================= -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="RECIPIENT PHONE NUMBER"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="#68766D" />
+
+
+
+            <EditText
+                android:id="@+id/phoneNumberEditText"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="8dp"
+                android:hint="e.g. 98XXXXXXXX"
+                android:inputType="phone"
+                android:singleLine="true"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:textSize="15sp"
+                android:textColor="#18231B"
+                android:textColorHint="#8A958D"
+                android:background="@drawable/bg_input"/>
+
+
+            <!-- ================================================= -->
+            <!-- TASKS -->
+            <!-- ================================================= -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="CARE TASKS"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="#68766D" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Select the tasks you want to include in the SMS."
+                android:textSize="12sp"
+                android:textColor="#7A857E" />
+
+
+            <!-- TASK LIST -->
+
+            <LinearLayout
+                android:id="@+id/tasksContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical"
+                android:background="@drawable/bg_card"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp" />
+
+
+            <!-- NO TASKS -->
+
+            <TextView
+                android:id="@+id/noTasksText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:padding="16dp"
+                android:gravity="center"
+                android:text="No care tasks are scheduled for this pet today."
+                android:textSize="13sp"
+                android:textColor="#68766D"
+                android:visibility="gone" />
+
+
+            <!-- ================================================= -->
+            <!-- MESSAGE PREVIEW TITLE -->
+            <!-- ================================================= -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="MESSAGE PREVIEW"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="#68766D" />
+
+
+            <!-- ================================================= -->
+            <!-- MESSAGE PREVIEW -->
+            <!-- ================================================= -->
+
+            <TextView
+                android:id="@+id/messagePreviewText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp"
+                android:gravity="top|start"
+                android:textAlignment="viewStart"
+                android:text="Select a pet and care tasks to create the SMS."
+                android:textSize="14sp"
+                android:textColor="#18231B"
+                android:lineSpacingExtra="2dp"
+                android:includeFontPadding="true"
+                android:background="@drawable/bg_card" />
+
+
+            <!-- ================================================= -->
+            <!-- SEND BUTTON -->
+            <!-- ================================================= -->
+
+            <Button
+                android:id="@+id/sendSmsButton"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="20dp"
+                android:text="Send by SMS"
+                android:textAllCaps="false"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/bg_button_green" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

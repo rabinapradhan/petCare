@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Main PetCare colours -->
+    <color name="petcare_green">#2E8B57</color>
+    <color name="petcare_green_dark">#237346</color>
+
+    <color name="petcare_light_green">#DFF5E3</color>
+    <color name="petcare_cta_green">#D5F3D9</color>
+
+    <!-- Backgrounds -->
+    <color name="petcare_background">#F9FBF4</color>
+    <color name="petcare_card">#FFFFFF</color>
+
+    <!-- Hero -->
+    <color name="petcare_hero_background">#C8D1B8</color>
+
+    <!-- Text -->
+    <color name="petcare_text">#10231B</color>
+    <color name="petcare_text_secondary">#66736D</color>
+
+    <!-- Misc -->
+    <color name="white">#FFFFFF</color>
+    <color name="transparent">#00000000</color>
+    <color name="black">#000000</color>
+
+
+    <color name="background">#F8FAF2</color>
+
+    <color name="pet_green">#2D824B</color>
+
+    <color name="dark_green">#176B3A</color>
+
+    <color name="light_green">#D9F4DD</color>
+
+    <color name="soft_green">#CFF0D5</color>
+
+    <color name="border_green">#CFE2D4</color>
+
+    <color name="input_border">#D0DED4</color>
+
+    <color name="text_secondary">#63756C</color>
+
+    <color name="progress_green">#A8D8B8</color>
+
+
+
+    <color name="pet_green_light">#DDF3E4</color>
+    <color name="pet_background">#F5F9F1</color>
+    <color name="pet_text">#1D2B24</color>
+    <color name="pet_secondary_text">#718078</color>
+    <color name="pet_border">#DDE6DF</color>
+    <color name="pet_card">#FFFFFF</color>
+
+
+
+
+
+</resources>

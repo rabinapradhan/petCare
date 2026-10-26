@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#F6F9F0">
+
+    <!-- HEADER -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="22dp"
+        android:paddingStart="18dp"
+        android:paddingEnd="18dp"
+        android:background="@color/pet_background">
+            <!-- LOGO -->
+
+            <ImageView
+                android:id="@+id/logoIcon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:padding="9dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_pet_profile2"
+                android:background="@drawable/bg_button_green"
+                app:tint="@android:color/white"
+                android:contentDescription="Pet profile"
+                android:scaleType="centerInside"
+                />
+
+
+
+
+        <!-- Header Title -->
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginStart="14dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="My pets"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#18231B" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Profiles, routines and records"
+                android:textSize="13sp"
+                android:textColor="#68766D"
+                android:layout_marginTop="2dp" />
+
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/logoutButton"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:gravity="center"
+            android:src="@drawable/ic_logout"
+            android:contentDescription="Logout"
+            android:background="@drawable/bg_light_green"
+            android:clickable="true"
+            android:focusable="true"
+            />
+
+    </LinearLayout>
+
+    <!-- Header Divider -->
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#DDE5D9" />
+
+    <!-- CONTENT -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="18dp">
+
+            <!-- PETS CONTAINER -->
+
+            <LinearLayout
+                android:id="@+id/petsContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+            <!-- EMPTY PETS MESSAGE -->
+
+            <TextView
+                android:id="@+id/emptyPetsText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="12dp"
+                android:gravity="center"
+                android:text="You haven't added any pets yet."
+                android:textSize="15sp"
+                android:textColor="#68766D"
+                android:visibility="gone" />
+
+            <!-- ADD PET BUTTON -->
+
+            <TextView
+                android:id="@+id/addPetButton"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginTop="12dp"
+                android:gravity="center"
+                android:text="+   Add a pet"
+                android:textSize="16sp"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/bg_button_green"
+                android:clickable="true"
+                android:focusable="true" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!-- BOTTOM NAVIGATION -->
+
+    <include
+        layout="@layout/bottom_navigation" />
+
+</LinearLayout>

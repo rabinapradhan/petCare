@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true"
+    android:background="@drawable/bg_card">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="20dp"
+        android:paddingTop="16dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="18dp">
+
+
+        <!-- ================================================== -->
+        <!-- TITLE -->
+        <!-- ================================================== -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Pin a place"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/closePlaceDialog"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:gravity="center"
+                android:text="×"
+                android:textColor="@color/text_secondary"
+                android:textSize="24sp" />
+
+        </LinearLayout>
+
+
+        <!-- ================================================== -->
+        <!-- DESCRIPTION -->
+        <!-- ================================================== -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Allow location, search Google for the place, or tap the map behind this sheet to drop a pin."
+            android:textColor="@color/text_secondary"
+            android:textSize="12sp"
+            android:lineSpacingExtra="2dp" />
+
+
+        <!-- ================================================== -->
+        <!-- TYPE -->
+        <!-- ================================================== -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="TYPE"
+            android:textColor="@color/text_secondary"
+            android:textSize="11sp" />
+
+
+        <Spinner
+            android:id="@+id/placeTypeSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="5dp"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:background="@drawable/bg_outline_card"
+            android:spinnerMode="dropdown" />
+
+
+        <!-- ================================================== -->
+        <!-- GOOGLE SEARCH -->
+        <!-- ================================================== -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="FIND IT ON GOOGLE MAPS"
+            android:textColor="@color/text_secondary"
+            android:textSize="11sp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <EditText
+                android:id="@+id/googleSearchEditText"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:hint="Swoyambhu Vet Clinic"
+                android:textSize="13sp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/text_secondary"
+                android:singleLine="true"
+                android:background="@drawable/bg_outline_card" />
+
+
+            <TextView
+                android:id="@+id/searchGoogleButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="8dp"
+                android:gravity="center"
+                android:text="⌕"
+                android:textColor="@color/dark_green"
+                android:textSize="25sp"
+                android:background="@drawable/bg_light_green" />
+
+        </LinearLayout>
+
+
+        <!-- ================================================== -->
+        <!-- FIND NEARBY -->
+        <!-- ================================================== -->
+
+        <TextView
+            android:id="@+id/findNearbyButton"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="20dp"
+            android:gravity="center"
+            android:text="Find veterinary clinics near me"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:textColor="@android:color/white"
+            android:background="@drawable/bg_button_green"
+            android:clickable="true"
+            android:focusable="true" />
+        <!-- ================================================== -->
+        <!-- NAME -->
+        <!-- ================================================== -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="NAME"
+            android:textColor="@color/text_secondary"
+            android:textSize="11sp" />
+
+
+        <EditText
+            android:id="@+id/placeNameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="5dp"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:hint="Swoyambhu Vet Clinic"
+            android:textSize="13sp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/text_secondary"
+            android:singleLine="true"
+            android:background="@drawable/bg_outline_card" />
+
+
+        <!-- ================================================== -->
+        <!-- ADDRESS -->
+        <!-- ================================================== -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13dp"
+            android:text="ADDRESS"
+            android:textColor="@color/text_secondary"
+            android:textSize="11sp" />
+
+
+        <EditText
+            android:id="@+id/placeAddressEditText"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="5dp"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:hint="12 Mill Lane"
+            android:textSize="13sp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/text_secondary"
+            android:singleLine="true"
+            android:background="@drawable/bg_outline_card" />
+
+
+        <!-- ================================================== -->
+        <!-- LATITUDE + LONGITUDE -->
+        <!-- ================================================== -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13dp"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginEnd="6dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="LATITUDE"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="11sp" />
+
+
+                <EditText
+                    android:id="@+id/latitudeEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginTop="5dp"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:hint="51.5074"
+                    android:textSize="13sp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/text_secondary"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:singleLine="true"
+                    android:background="@drawable/bg_outline_card" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginStart="6dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="LONGITUDE"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="11sp" />
+
+
+                <EditText
+                    android:id="@+id/longitudeEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginTop="5dp"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:hint="-0.1278"
+                    android:textSize="13sp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/text_secondary"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:singleLine="true"
+                    android:background="@drawable/bg_outline_card" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <!-- ================================================== -->
+        <!-- CURRENT LOCATION -->
+        <!-- ================================================== -->
+
+        <LinearLayout
+            android:id="@+id/useCurrentLocationButton"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_light_green"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/ic_my_location"
+                android:contentDescription="@null"
+                app:tint="@color/dark_green" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Use my current location"
+                android:textColor="@color/dark_green"
+                android:textSize="12sp"
+                android:includeFontPadding="false" />
+
+        </LinearLayout>
+
+        <!-- ================================================== -->
+        <!-- OPENING HOURS -->
+        <!-- ================================================== -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="OPENING HOURS"
+            android:textColor="@color/text_secondary"
+            android:textSize="11sp" />
+
+
+        <EditText
+            android:id="@+id/openingHoursEditText"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="5dp"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:hint="Mon–Fri 8:00–18:00"
+            android:textSize="13sp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/text_secondary"
+            android:singleLine="true"
+            android:background="@drawable/bg_outline_card" />
+
+
+        <!-- ================================================== -->
+        <!-- PHONE -->
+        <!-- ================================================== -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13dp"
+            android:text="PHONE"
+            android:textColor="@color/text_secondary"
+            android:textSize="11sp" />
+
+
+        <EditText
+            android:id="@+id/phoneEditText"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="5dp"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:hint="020 7123 4567"
+            android:textSize="13sp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/text_secondary"
+            android:singleLine="true"
+            android:inputType="phone"
+            android:background="@drawable/bg_outline_card" />
+
+
+        <!-- ================================================== -->
+        <!-- NOTES -->
+        <!-- ================================================== -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13dp"
+            android:text="NOTES"
+            android:textColor="@color/text_secondary"
+            android:textSize="11sp" />
+
+
+        <EditText
+            android:id="@+id/notesEditText"
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:layout_marginTop="5dp"
+            android:gravity="top|start"
+            android:padding="12dp"
+            android:hint="Ask for Dr Patel, parking at the back"
+            android:textSize="13sp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/text_secondary"
+            android:inputType="textMultiLine"
+            android:background="@drawable/bg_outline_card" />
+
+
+        <!-- ================================================== -->
+        <!-- SAVE -->
+        <!-- ================================================== -->
+
+        <TextView
+            android:id="@+id/savePlaceButton"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:text="Save place"
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:background="@drawable/bg_button_green" />
+
+    </LinearLayout>
+
+</ScrollView>

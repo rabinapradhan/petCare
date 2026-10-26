@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/background">
+
+
+    <!-- ========================================================= -->
+    <!-- HEADER -->
+    <!-- ========================================================= -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="22dp"
+        android:paddingStart="18dp"
+        android:paddingEnd="18dp"
+        android:background="@color/pet_background">
+
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/backButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:gravity="center"
+            android:contentDescription="Back"
+            android:background="@drawable/bg_light_green"
+            android:padding="0dp"
+            app:icon="@drawable/ic_arrow_back"
+            app:iconGravity="textStart"
+            app:iconPadding="0dp"
+            app:iconTint="@color/black"
+            app:backgroundTint="@null"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="16dp">
+
+            <TextView
+                android:id="@+id/formTitleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add a pet"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/formSubtitleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Build a profile"
+                android:textColor="@color/text_secondary"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <!-- ========================================================= -->
+    <!-- HEADER DIVIDER -->
+    <!-- ========================================================= -->
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/border_green" />
+
+
+    <!-- ========================================================= -->
+    <!-- FORM -->
+    <!-- ========================================================= -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+
+            <!-- ================================================= -->
+            <!-- PHOTO -->
+            <!-- ================================================= -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp"
+                android:background="@drawable/bg_card">
+
+
+                <!-- PHOTO LABEL -->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PHOTO"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="14sp" />
+
+
+                <!-- ================================================= -->
+                <!-- PHOTO SELECTION ROW -->
+                <!-- ================================================= -->
+
+                <LinearLayout
+                    android:id="@+id/choosePhotoButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="15dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:clickable="true"
+                    android:focusable="true">
+
+
+                    <!-- ================================================= -->
+                    <!-- PHOTO BOX -->
+                    <!-- ================================================= -->
+
+                    <FrameLayout
+                        android:id="@+id/photoIcon"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="@drawable/bg_light_green">
+
+
+                        <!-- PLACEHOLDER ICON -->
+
+                        <TextView
+                            android:id="@+id/photoPlaceholder"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="▧"
+                            android:textSize="36sp"
+                            android:textColor="@color/dark_green" />
+
+
+                        <!-- ================================================= -->
+                        <!-- SELECTED PHOTO -->
+                        <!-- ================================================= -->
+
+                        <ImageView
+                            android:id="@+id/photoPreview"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:contentDescription="Selected pet photo"
+                            android:visibility="gone" />
+
+                    </FrameLayout>
+
+
+                    <!-- ================================================= -->
+                    <!-- PHOTO TEXT -->
+                    <!-- ================================================= -->
+
+                    <TextView
+                        android:id="@+id/photoText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:text="Choose photo"
+                        android:textColor="@color/dark_green"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <!-- ================================================= -->
+            <!-- NAME -->
+            <!-- ================================================= -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:text="NAME"
+                android:textColor="@color/text_secondary"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/nameEditText"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="7dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:hint="Max"
+                android:textSize="18sp"
+                android:singleLine="true"
+                android:background="@drawable/bg_input" />
+
+
+            <!-- ================================================= -->
+            <!-- SPECIES -->
+            <!-- ================================================= -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:text="SPECIES"
+                android:textColor="@color/text_secondary"
+                android:textSize="14sp" />
+
+            <Spinner
+                android:id="@+id/speciesSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="7dp"
+                android:background="@drawable/bg_input" />
+
+
+            <!-- ================================================= -->
+            <!-- BREED + AGE -->
+            <!-- ================================================= -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:orientation="horizontal">
+
+                <!-- BREED -->
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="BREED"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/breedEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="7dp"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:hint="Golden Retriever"
+                        android:textSize="18sp"
+                        android:singleLine="true"
+                        android:background="@drawable/bg_input" />
+
+                </LinearLayout>
+
+
+                <Space
+                    android:layout_width="15dp"
+                    android:layout_height="1dp" />
+
+
+                <!-- AGE -->
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="AGE"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/ageEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="7dp"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:hint="4 years"
+                        android:textSize="18sp"
+                        android:singleLine="true"
+                        android:background="@drawable/bg_input" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <!-- ================================================= -->
+            <!-- WEIGHT -->
+            <!-- ================================================= -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:text="WEIGHT"
+                android:textColor="@color/text_secondary"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/weightEditText"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="7dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:hint="31 kg"
+                android:textSize="18sp"
+                android:singleLine="true"
+                android:background="@drawable/bg_input" />
+
+
+            <!-- ================================================= -->
+            <!-- DIET -->
+            <!-- ================================================= -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:text="DIETARY PREFERENCES"
+                android:textColor="@color/text_secondary"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/dietEditText"
+                android:layout_width="match_parent"
+                android:layout_height="82dp"
+                android:layout_marginTop="7dp"
+                android:gravity="top"
+                android:padding="16dp"
+                android:hint="Grain-free kibble, 2 cups per day"
+                android:textSize="18sp"
+                android:background="@drawable/bg_input" />
+
+
+            <!-- ================================================= -->
+            <!-- ALLERGIES -->
+            <!-- ================================================= -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:text="ALLERGIES"
+                android:textColor="@color/text_secondary"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/allergiesEditText"
+                android:layout_width="match_parent"
+                android:layout_height="82dp"
+                android:layout_marginTop="7dp"
+                android:gravity="top"
+                android:padding="16dp"
+                android:hint="Chicken, pollen"
+                android:textSize="18sp"
+                android:background="@drawable/bg_input" />
+
+
+            <!-- ================================================= -->
+            <!-- VACCINATION -->
+            <!-- ================================================= -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:text="VACCINATION HISTORY"
+                android:textColor="@color/text_secondary"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/vaccinationEditText"
+                android:layout_width="match_parent"
+                android:layout_height="82dp"
+                android:layout_marginTop="7dp"
+                android:gravity="top"
+                android:padding="16dp"
+                android:hint="Rabies — Mar 2026"
+                android:textSize="18sp"
+                android:background="@drawable/bg_input" />
+
+
+            <!-- ================================================= -->
+            <!-- FAVOURITE TOYS -->
+            <!-- ================================================= -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:text="FAVOURITE TOYS"
+                android:textColor="@color/text_secondary"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/toysEditText"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="7dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:hint="Tennis ball, rope tug"
+                android:textSize="18sp"
+                android:singleLine="true"
+                android:background="@drawable/bg_input" />
+
+
+            <!-- ================================================= -->
+            <!-- NOTES -->
+            <!-- ================================================= -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:text="NOTES"
+                android:textColor="@color/text_secondary"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/notesEditText"
+                android:layout_width="match_parent"
+                android:layout_height="82dp"
+                android:layout_marginTop="7dp"
+                android:gravity="top"
+                android:padding="16dp"
+                android:hint="Nervous around fireworks"
+                android:textSize="18sp"
+                android:background="@drawable/bg_input" />
+
+
+            <!-- ================================================= -->
+            <!-- SAVE -->
+            <!-- ================================================= -->
+
+            <Button
+                android:id="@+id/savePetButton"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="20dp"
+                android:text="Save pet"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                android:textAllCaps="false"
+                android:background="@drawable/bg_button_green" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <!-- ========================================================= -->
+    <!-- BOTTOM NAVIGATION -->
+    <!-- ========================================================= -->
+
+    <include
+        layout="@layout/bottom_navigation" />
+
+</LinearLayout>

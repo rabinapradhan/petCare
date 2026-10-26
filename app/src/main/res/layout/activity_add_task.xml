@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="30dp"
+    android:background="#F7FAF1">
+
+    <!-- HEADER -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="New care task"
+            android:textSize="21sp"
+            android:textStyle="bold"
+            android:textColor="#18231B"/>
+
+        <TextView
+            android:id="@+id/closeButton"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:gravity="center"
+            android:text="×"
+            android:textSize="28sp"
+            android:textColor="#68766D"
+            android:clickable="true"
+            android:focusable="true"/>
+
+    </LinearLayout>
+
+    <!-- TASK -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="TASK"
+        android:textSize="14sp"
+        android:textColor="#68766D"/>
+
+    <EditText
+        android:id="@+id/taskEditText"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:hint="Morning walk"
+        android:textSize="16sp"
+        android:singleLine="true"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:background="@drawable/bg_pet_card"/>
+
+    <!-- CATEGORY / REPEATS -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CATEGORY"
+                android:textSize="14sp"
+                android:textColor="#68766D"/>
+
+            <Spinner
+                android:id="@+id/categorySpinner"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:background="@drawable/bg_pet_card"/>
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="14dp"
+            android:layout_height="1dp"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="REPEATS"
+                android:textSize="14sp"
+                android:textColor="#68766D"/>
+
+            <Spinner
+                android:id="@+id/repeatsSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:background="@drawable/bg_pet_card"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- TIME -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="TIME"
+        android:textSize="14sp"
+        android:textColor="#68766D"/>
+
+    <TextView
+        android:id="@+id/timeEditText"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:text="--:--"
+        android:textSize="16sp"
+        android:textColor="#18231B"
+        android:background="@drawable/bg_pet_card"
+        android:clickable="true"
+        android:focusable="true"/>
+
+    <!-- SUPPLIES -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="SUPPLIES NEEDED"
+        android:textSize="14sp"
+        android:textColor="#68766D"/>
+
+    <EditText
+        android:id="@+id/suppliesEditText"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Lead, poo bags, treats"
+        android:singleLine="true"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:background="@drawable/bg_pet_card"/>
+
+    <!-- NOTES -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="NOTES"
+        android:textSize="14sp"
+        android:textColor="#68766D"/>
+
+    <EditText
+        android:id="@+id/notesEditText"
+        android:layout_width="match_parent"
+        android:layout_height="76dp"
+        android:gravity="top"
+        android:hint="Keep to quiet streets"
+        android:padding="16dp"
+        android:textSize="16sp"
+        android:background="@drawable/bg_pet_card"/>
+
+    <TextView
+        android:id="@+id/saveTaskButton"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="Save task"
+        android:textSize="17sp"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/bg_button_green"
+        android:clickable="true"
+        android:focusable="true"/>
+
+</LinearLayout>

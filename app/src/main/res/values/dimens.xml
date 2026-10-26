@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="screen_horizontal_padding">24dp</dimen>
+
+    <dimen name="header_top_margin">28dp</dimen>
+
+    <dimen name="hero_title_margin_top">28dp</dimen>
+
+    <dimen name="hero_description_margin_top">12dp</dimen>
+
+    <dimen name="button_margin_top">24dp</dimen>
+
+    <dimen name="hero_image_margin_top">28dp</dimen>
+
+    <dimen name="hero_image_height">316dp</dimen>
+
+    <dimen name="card_margin_top">16dp</dimen>
+
+    <dimen name="card_padding">20dp</dimen>
+
+    <dimen name="icon_size">48dp</dimen>
+
+    <dimen name="card_radius">28dp</dimen>
+
+    <dimen name="button_height">52dp</dimen>
+
+    <dimen name="button_radius">28dp</dimen>
+
+    <dimen name="cta_padding">30dp</dimen>
+
+    <dimen name="cta_margin_top">28dp</dimen>
+
+    <dimen name="bottom_padding">32dp</dimen>
+
+</resources>

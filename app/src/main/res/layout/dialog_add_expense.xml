@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="26dp"
+        android:background="@drawable/bg_spending_dialog">
+
+        <!-- Title -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Log an expense"
+                android:textColor="@color/pet_text"
+                android:textSize="17sp"
+                android:textStyle="bold"/>
+
+            <ImageButton
+                android:id="@+id/closeExpenseDialog"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:padding="6dp"
+                android:src="@drawable/ic_close"
+                android:background="@android:color/transparent"
+                android:contentDescription="Close"
+                android:clickable="true"
+                android:focusable="true" />
+
+        </LinearLayout>
+
+
+        <!-- Amount -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="AMOUNT (NRP)"
+            android:textColor="#75827B"
+            android:textSize="12sp"
+            android:layout_marginTop="22dp"/>
+
+        <EditText
+            android:id="@+id/expenseAmount"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_marginTop="5dp"
+            android:hint="200"
+            android:inputType="numberDecimal"
+            android:paddingStart="14dp"
+            android:paddingEnd="14dp"
+            android:background="@drawable/bg_spending_input"
+            android:textColor="#46534C"
+            android:textSize="14sp"/>
+
+
+        <!-- Category -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CATEGORY"
+            android:textColor="#75827B"
+            android:textSize="12sp"
+            android:layout_marginTop="18dp"/>
+
+        <Spinner
+            android:id="@+id/expenseCategory"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="5dp"
+            android:textColor="#46534C"
+            android:textSize="14sp"
+            android:background="@drawable/bg_spending_input"/>
+
+
+        <!-- Pet -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PET"
+            android:textColor="#75827B"
+            android:textSize="12sp"
+            android:layout_marginTop="16dp"/>
+
+        <Spinner
+            android:id="@+id/expensePet"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="5dp"
+            android:textColor="#46534C"
+            android:textSize="14sp"
+            android:background="@drawable/bg_spending_input"/>
+
+
+        <!-- Date -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DATE"
+            android:textColor="#75827B"
+            android:textSize="12sp"
+            android:layout_marginTop="16dp" />
+
+        <EditText
+            android:id="@+id/expenseDate"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/bg_spending_input"
+            android:clickable="true"
+            android:focusable="false"
+            android:paddingStart="14dp"
+            android:paddingEnd="14dp"
+            android:textColor="#46534C"
+            android:textSize="14sp"
+            android:singleLine="true"
+            android:drawableEnd="@drawable/ic_calendar" />
+
+
+        <!-- Note -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NOTE"
+            android:textColor="#75827B"
+            android:textSize="12sp"
+            android:layout_marginTop="16dp"/>
+
+        <EditText
+            android:id="@+id/expenseNote"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="5dp"
+            android:hint="Grain-free kibble, 12kg"
+            android:singleLine="true"
+            android:paddingStart="14dp"
+            android:paddingEnd="14dp"
+            android:background="@drawable/bg_spending_input"
+            android:textColor="#46534C"
+            android:textSize="14sp"/>
+
+
+        <!-- Save -->
+
+        <TextView
+            android:id="@+id/saveExpenseButton"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="Save expense"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:background="@drawable/bg_spending_save"
+            android:clickable="true"
+            android:focusable="true"/>
+
+    </LinearLayout>
+
+</ScrollView>

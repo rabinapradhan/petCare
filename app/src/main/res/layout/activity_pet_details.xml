@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F6F9F0">
+
+
+    <!-- ========================================================= -->
+    <!-- HEADER -->
+    <!-- ========================================================= -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="22dp"
+        android:paddingStart="18dp"
+        android:paddingEnd="18dp"
+        android:background="@color/pet_background">
+
+
+            <!-- BACK BUTTON -->
+
+        <TextView
+            android:id="@+id/backButton"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:gravity="center"
+            android:text="‹"
+            android:textSize="30sp"
+            android:textColor="#203026"
+            android:background="@drawable/bg_icon_circle"
+            android:clickable="true"
+            android:focusable="true" />
+
+
+        <!-- PET NAME + SUBTITLE -->
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginStart="12dp">
+
+            <TextView
+                android:id="@+id/petNameText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Max"
+                android:textSize="19sp"
+                android:textStyle="bold"
+                android:textColor="#18231B" />
+
+            <TextView
+                android:id="@+id/petSubtitleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dog · Golden"
+                android:textSize="13sp"
+                android:textColor="#68766D"
+                android:layout_marginTop="2dp" />
+
+        </LinearLayout>
+
+
+        <!-- SMS DELEGATE -->
+
+        <TextView
+            android:id="@+id/delegateButton"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:gravity="center"
+            android:text="➤"
+            android:textSize="18sp"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/bg_button_green"
+            android:clickable="true"
+            android:focusable="true" />
+
+
+        <!-- EDIT PET -->
+
+
+
+        <ImageButton
+            android:id="@+id/editPetButton"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/bg_icon_circle"
+            android:src="@drawable/ic_edit"
+            android:contentDescription="Edit pet"
+            android:padding="10dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:tint="#203026" />
+
+    </LinearLayout>
+
+
+    <!-- ========================================================= -->
+    <!-- HEADER DIVIDER -->
+    <!-- ========================================================= -->
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#DDE5D9" />
+
+
+    <!-- ========================================================= -->
+    <!-- CONTENT -->
+    <!-- ========================================================= -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="18dp">
+
+
+            <!-- ================================================= -->
+            <!-- PET INFORMATION CARD -->
+            <!-- ================================================= -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="18dp"
+                android:background="@drawable/bg_pet_card"
+                android:elevation="3dp">
+
+
+                <!-- ============================================= -->
+                <!-- PET PHOTO -->
+                <!-- ============================================= -->
+
+<!--                <ImageView-->
+<!--                    android:id="@+id/petPhotoImageView"-->
+<!--                    android:layout_width="130dp"-->
+<!--                    android:layout_height="130dp"-->
+<!--                    android:layout_gravity="center_horizontal"-->
+<!--                    android:layout_marginBottom="18dp"-->
+<!--                    android:background="@drawable/bg_light_green"-->
+<!--                    android:contentDescription="Pet photo"-->
+<!--                    android:scaleType="centerCrop"-->
+<!--                    android:src="@drawable/ic_pet_profile" />-->
+
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/petPhotoImageView"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="18dp"
+                    android:contentDescription="Pet photo"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_pet_profile"
+                    app:shapeAppearanceOverlay="@style/CircularImage"
+                    app:strokeColor="#2E8B57"
+                    app:strokeWidth="2dp" />
+
+                <!-- ============================================= -->
+                <!-- AGE -->
+                <!-- ============================================= -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="AGE"
+                        android:textSize="13sp"
+                        android:textColor="#68766D" />
+
+                    <TextView
+                        android:id="@+id/ageText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="4"
+                        android:textSize="15sp"
+                        android:textColor="#18231B" />
+
+                </LinearLayout>
+
+
+                <!-- ============================================= -->
+                <!-- WEIGHT -->
+                <!-- ============================================= -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="WEIGHT"
+                        android:textSize="13sp"
+                        android:textColor="#68766D" />
+
+                    <TextView
+                        android:id="@+id/weightText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="15sp"
+                        android:textColor="#18231B" />
+
+                </LinearLayout>
+
+
+                <!-- ============================================= -->
+                <!-- DIET -->
+                <!-- ============================================= -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="DIET"
+                        android:textSize="13sp"
+                        android:textColor="#68766D" />
+
+                    <TextView
+                        android:id="@+id/dietText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="15sp"
+                        android:textColor="#18231B" />
+
+                </LinearLayout>
+
+
+                <!-- ============================================= -->
+                <!-- ALLERGIES -->
+                <!-- ============================================= -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="ALLERGIES"
+                        android:textSize="13sp"
+                        android:textColor="#68766D" />
+
+                    <TextView
+                        android:id="@+id/allergiesText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="15sp"
+                        android:textColor="#18231B" />
+
+                </LinearLayout>
+
+
+                <!-- ============================================= -->
+                <!-- VACCINATIONS -->
+                <!-- ============================================= -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="VACCINATIONS"
+                        android:textSize="13sp"
+                        android:textColor="#68766D" />
+
+                    <TextView
+                        android:id="@+id/vaccinationsText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="15sp"
+                        android:textColor="#18231B" />
+
+                </LinearLayout>
+
+
+                <!-- ============================================= -->
+                <!-- FAVOURITE TOYS -->
+                <!-- ============================================= -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="FAVOURITE TOYS"
+                        android:textSize="13sp"
+                        android:textColor="#68766D" />
+
+                    <TextView
+                        android:id="@+id/toysText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="15sp"
+                        android:textColor="#18231B" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <!-- ================================================= -->
+            <!-- CARE ROUTINE HEADER -->
+            <!-- ================================================= -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Care routine"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:textColor="#18231B" />
+
+
+                <TextView
+                    android:id="@+id/addTaskButton"
+                    android:layout_width="84dp"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:text="+  Task"
+                    android:textSize="14sp"
+                    android:textColor="#FFFFFF"
+                    android:background="@drawable/bg_button_green"
+                    android:clickable="true"
+                    android:focusable="true" />
+
+            </LinearLayout>
+
+
+            <!-- ================================================= -->
+            <!-- NO TASKS -->
+            <!-- ================================================= -->
+
+            <TextView
+                android:id="@+id/noTasksText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="18dp"
+                android:text="No tasks yet. Add feeding times, walks, grooming or medication."
+                android:textSize="15sp"
+                android:textColor="#68766D"
+                android:background="@drawable/bg_pet_card" />
+
+
+            <!-- ================================================= -->
+            <!-- TASKS -->
+            <!-- ================================================= -->
+
+            <LinearLayout
+                android:id="@+id/tasksContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical" />
+
+
+            <!-- ================================================= -->
+            <!-- DELETE PET -->
+            <!-- ================================================= -->
+
+            <LinearLayout
+                android:id="@+id/deletePetButton"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="12dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:clickable="true"
+                android:focusable="true">
+
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:src="@drawable/ic_delete"
+                    android:contentDescription="Delete pet"
+                    app:tint="#E53935" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:text="Delete this pet"
+                    android:textSize="15sp"
+                    android:textColor="#E53935" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <!-- ========================================================= -->
+    <!-- BOTTOM NAVIGATION -->
+    <!-- ========================================================= -->
+
+    <include
+        layout="@layout/bottom_navigation" />
+
+</LinearLayout>

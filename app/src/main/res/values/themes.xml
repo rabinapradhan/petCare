@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.PetCare"
+        parent="Theme.Material3.Light.NoActionBar">
+
+        <item name="android:fontFamily">sans</item>
+
+        <item name="android:windowLightStatusBar">true</item>
+
+        <item name="android:statusBarColor">@color/petcare_background</item>
+
+        <item name="android:navigationBarColor">@color/petcare_background</item>
+
+        <item name="android:windowActionModeOverlay">true</item>
+
+        <item name="colorPrimary">@color/petcare_green</item>
+
+        <item name="colorPrimaryContainer">@color/petcare_light_green</item>
+
+        <item name="android:windowBackground">@color/petcare_background</item>
+
+    </style>
+
+</resources>

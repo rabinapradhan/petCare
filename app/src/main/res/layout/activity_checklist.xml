@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#F6F9F0">
+
+
+    <!-- ===================================================== -->
+    <!-- HEADER -->
+    <!-- ===================================================== -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="68dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="22dp"
+            android:paddingStart="18dp"
+            android:paddingEnd="18dp"
+            android:background="@color/pet_background">
+
+            <!-- LOGO -->
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:padding="9dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_pet_profile2"
+                android:background="@drawable/bg_button_green"
+                app:tint="@android:color/white" />
+
+
+
+
+        <!-- TITLE -->
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginStart="14dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Care checklist"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#18231B" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tick tasks off as you go"
+                android:textSize="13sp"
+                android:textColor="#68766D" />
+
+        </LinearLayout>
+
+
+        <!-- ================================================= -->
+        <!-- DELEGATE BY SMS -->
+        <!-- ================================================= -->
+
+        <ImageView
+            android:id="@+id/delegateButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:padding="12dp"
+            android:src="@drawable/ic_send"
+            android:background="@drawable/bg_button_green"
+            android:contentDescription="Delegate care by SMS"
+            android:clickable="true"
+            android:focusable="true" />
+
+    </LinearLayout>
+
+
+    <!-- HEADER DIVIDER -->
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#DDE5D9" />
+
+
+    <!-- ===================================================== -->
+    <!-- CONTENT -->
+    <!-- ===================================================== -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="18dp">
+
+
+            <!-- ================================================= -->
+            <!-- PROGRESS -->
+            <!-- ================================================= -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:orientation="vertical"
+                android:padding="18dp"
+                android:background="#D7F2DB">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/progressText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="0 of 0 tasks done"
+                        android:textSize="15sp"
+                        android:textColor="#18231B" />
+
+                    <TextView
+                        android:id="@+id/percentText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0%"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        android:textColor="#18231B" />
+
+                </LinearLayout>
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:layout_marginTop="12dp"
+                    android:max="100"
+                    android:progress="0"
+                    android:progressTint="#79B887"
+                    android:backgroundTint="#BFDCC5" />
+
+            </LinearLayout>
+
+
+            <!-- ================================================= -->
+            <!-- EMPTY STATE -->
+            <!-- ================================================= -->
+
+            <TextView
+                android:id="@+id/noTasksText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:gravity="center"
+                android:text="No care tasks yet."
+                android:textSize="15sp"
+                android:textColor="#68766D"
+                android:visibility="gone" />
+
+
+            <!-- ================================================= -->
+            <!-- TASKS -->
+            <!-- ================================================= -->
+
+            <LinearLayout
+                android:id="@+id/tasksContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <!-- ===================================================== -->
+    <!-- BOTTOM NAVIGATION -->
+    <!-- ===================================================== -->
+
+    <include
+        layout="@layout/bottom_navigation" />
+
+</LinearLayout>

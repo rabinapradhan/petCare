@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="72dp"
+    android:orientation="horizontal"
+    android:gravity="center"
+   android:paddingTop="10dp"
+    android:background="#FAFCF5"
+    android:elevation="4dp">
+
+    <!-- HOME -->
+    <TextView
+        android:id="@+id/navHome"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:drawableTop="@drawable/ic_home"
+        android:drawablePadding="3dp"
+        android:text="Home"
+        android:textSize="12sp"
+        android:textColor="#58705E"
+        android:fontFamily="sans"
+        android:clickable="true"
+        android:focusable="true"
+        app:drawableTint="#58705E" />
+
+
+    <!-- PETS -->
+    <TextView
+        android:id="@+id/navPets"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:drawableTop="@drawable/ic_pet_profile"
+        android:drawablePadding="3dp"
+        android:text="Pets"
+        android:textSize="12sp"
+        android:textColor="#2D814A"
+        android:fontFamily="sans"
+        android:clickable="true"
+        android:focusable="true"
+        app:drawableTint="#2D814A" />
+
+
+    <!-- CHECKLIST -->
+    <TextView
+        android:id="@+id/navChecklist"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:drawableTop="@drawable/ic_checklist"
+        android:drawablePadding="3dp"
+        android:text="Checklist"
+        android:textSize="12sp"
+        android:textColor="#58705E"
+        android:fontFamily="sans"
+        android:clickable="true"
+        android:focusable="true"
+        app:drawableTint="#58705E" />
+
+
+    <!-- PLACES -->
+    <TextView
+        android:id="@+id/navPlaces"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:drawableTop="@drawable/ic_location"
+        android:drawablePadding="3dp"
+        android:text="Places"
+        android:textSize="12sp"
+        android:textColor="#58705E"
+        android:fontFamily="sans"
+        android:clickable="true"
+        android:focusable="true"
+        app:drawableTint="#58705E" />
+
+
+    <!-- SPEND -->
+    <TextView
+        android:id="@+id/navSpend"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:drawableTop="@drawable/ic_wallet"
+        android:drawablePadding="3dp"
+        android:text="Spend"
+        android:textSize="12sp"
+        android:textColor="#58705E"
+        android:fontFamily="sans"
+        android:clickable="true"
+        android:focusable="true"
+        app:drawableTint="#58705E" />
+
+</LinearLayout>

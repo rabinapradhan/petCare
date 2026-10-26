@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:padding="14dp"
+    android:layout_marginBottom="10dp"
+    android:background="@drawable/bg_checklist_task">
+
+    <!-- ===================================================== -->
+    <!-- CATEGORY ICON -->
+    <!-- ===================================================== -->
+
+    <ImageView
+        android:id="@+id/taskIconText"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:padding="10dp"
+        android:background="@drawable/bg_task_icon"
+        android:scaleType="centerInside"
+        android:contentDescription="Task category" />
+
+
+    <!-- ===================================================== -->
+    <!-- TASK INFORMATION -->
+    <!-- ===================================================== -->
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingStart="13dp"
+        android:paddingEnd="8dp">
+
+        <!-- TASK TITLE -->
+
+        <TextView
+            android:id="@+id/taskTitleText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Walk"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+
+        <!-- PET / TIME / REPEAT -->
+
+        <TextView
+            android:id="@+id/taskDetailsText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:text="Max · 02:11 · daily"
+            android:textColor="@color/text_secondary"
+            android:textSize="13sp" />
+
+
+        <!-- SUPPLIES -->
+
+        <TextView
+            android:id="@+id/taskSuppliesText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:text="Supplies: None"
+            android:textColor="@color/text_secondary"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+
+    <!-- ===================================================== -->
+    <!-- COMPLETE -->
+    <!-- ===================================================== -->
+
+    <ImageView
+        android:id="@+id/completeButton"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:padding="6dp"
+        android:src="@drawable/ic_checkbox"
+        android:contentDescription="Complete task"
+        android:clickable="true"
+        android:focusable="true" />
+
+
+    <!-- ===================================================== -->
+    <!-- EDIT -->
+    <!-- ===================================================== -->
+
+    <ImageView
+        android:id="@+id/editTaskButton"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:padding="7dp"
+        android:src="@drawable/ic_edit"
+        android:contentDescription="Edit task"
+        android:clickable="true"
+        android:focusable="true" />
+
+
+    <!-- ===================================================== -->
+    <!-- DELETE -->
+    <!-- ===================================================== -->
+
+    <ImageView
+        android:id="@+id/deleteTaskButton"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:padding="7dp"
+        android:src="@drawable/ic_delete"
+        android:contentDescription="Delete task"
+        android:clickable="true"
+        android:focusable="true" />
+
+</LinearLayout>
