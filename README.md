@@ -86,23 +86,21 @@ The application aims to make everyday pet care more organized, convenient, and m
 - Access pet management, checklist, nearby places, and spending sections.
 
 ---
-
 ## Tech Stack
-| Technology | Purpose |
-| Kotlin | Primary programming language |
-| Android Studio | Development environment |
-| XML | UI layouts |
-| Android SDK | Native Android development |
-| Room Database | Local database management |
-| SQLite | Local data storage |
-| MVVM | ViewModel-based application architecture |
-| Kotlin Coroutines | Asynchronous operations |
-| Kotlin Flow | Reactive data observation |
-| Google Maps SDK | Interactive maps |
-| Google Places API | Nearby places discovery |
-| Google Location Services | Device location access |
-| Material Components | UI components |
-| Gradle | Build automation |
+- Kotlin -> Primary programming language
+- Android Studio -> Development environment 
+- XML -> UI layouts
+- Android SDK -> Native Android development
+- Room Database -> Local database management
+- SQLite -> Local data storage 
+- MVVM -> ViewModel-based application architecture
+- Kotlin Coroutines -> Asynchronous operations
+- Kotlin Flow -> Reactive data observation
+- Google Maps SDK -> Interactive maps 
+- Google Places API -> Nearby places discovery
+- Google Location Services -> Device location access 
+- Material Components -> UI components
+-  Gradle -> Build automation 
 
 ---
 
