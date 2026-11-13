@@ -106,7 +106,7 @@ The application aims to make everyday pet care more organized, convenient, and m
 
 ---
 
-## 🏗️ Project Architecture
+## Project Architecture
 
 The project follows a layered structure using Activities, ViewModels, Repositories, DAOs, and Room Database.
 
